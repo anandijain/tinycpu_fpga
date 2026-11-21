@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+    "verilog.languageServer.veribleVerilogLs.enabled": true,
+    "verilog.languageServer.veribleVerilogLs.arguments": "--ruleset=none"
+}

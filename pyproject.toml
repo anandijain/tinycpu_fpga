@@ -1,0 +1,21 @@
+[project]
+name = "fpga"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+# This release matches the SDK packer's output for our Nano 20K designs.
+dependencies = ["apycula==0.34"]
+
+[dependency-groups]
+dev = ["cocotb>=2,<3", "pytest", "ruff"]
+
+[tool.uv]
+package = false
+python-preference = "only-managed"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+cache_dir = "build/tests/pytest-cache"
+
+[tool.ruff]
+extend-exclude = ["build"]
+cache-dir = "build/ruff-cache"

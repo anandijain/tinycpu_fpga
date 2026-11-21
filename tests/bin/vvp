@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start the SDK simulator without its launcher's Python overrides.
+set -eu
+suite=${COCOTB_OSS_CAD_ROOT:?}
+exec "$suite/lib/ld-linux-x86-64.so.2" --inhibit-cache --inhibit-rpath '' \
+    --library-path "$suite/lib" "$suite/libexec/vvp" "$@"
